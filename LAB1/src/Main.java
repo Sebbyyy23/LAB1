@@ -12,10 +12,9 @@ public class Main {
         System.out.println(segment.toSvg());
         System.out.println(perpendicularSegements[0].toSvg());
 
-        Polygon polygon = new Polygon(3);
+        Polygon polygon = new Polygon(3, new Style("yellow", "black", 2));
         polygon.setVertices(new Point[]{point1, point2, point3});
         System.out.println(polygon.toSvg());
     }
-
 
 }
