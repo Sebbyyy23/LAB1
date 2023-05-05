@@ -5,14 +5,23 @@ public class Polygon {
 
     public Polygon (int value){
         vertices = new Point[value];
-        this.style = new Style("transparent", "black", 1);
+        style = new Style("transparent", "black", 1);
     }
     public Polygon (int value, Style style){
         vertices = new Point[value];
         this.style = style;
     }
 
-    public void setVertices(int index, Point point){
+    public Polygon (Point[] points){
+        vertices = points;
+        style = new Style("transparent", "black", 1);
+    }
+    public Polygon (Point[] points, Style style){
+        vertices = points;
+        this.style = style;
+    }
+
+    public void setVertice(int index, Point point){
         vertices[index] = point;
     }
 
