@@ -4,6 +4,7 @@ out/
 !**/src/test/**/out/
 .idea
 LAB1.iml
+index.html
 
 ### Eclipse ###
 .apt_generated

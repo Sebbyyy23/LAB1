@@ -5,14 +5,14 @@ public class Main {
 
         Point
                 //TRIANGLE
-                point1 = new Point(1, 1),
-                point2 = new Point(30, 10),
-                point3 = new Point(200, 300),
+                point1 = new Point(200, 10),
+                point2 = new Point(250, 190),
+                point3 = new Point(160, 210),
                 //RECTANGLE
-                point4 = new Point(300, 50),
-                point5 = new Point(700, 50),
-                point6 = new Point(300, 80),
-                point7 = new Point(700, 80),
+                point4 = new Point(400, 50),
+                point5 = new Point(300, 100),
+                point6 = new Point(500, 200),
+                point7 = new Point(600, 300),
                 //PENTAGON
                 point8 = new Point(-5, -4),
                 point9 = new Point(-1, -4),
@@ -36,9 +36,9 @@ public class Main {
 //        polygons.add(new Polygon(new Point[]{point8, point9, point10, point11, point12}));
 
         SvgScene svgScene = new SvgScene();
-        svgScene.add(new Polygon(new Point[]{point1, point2, point3}));
-        svgScene.add(new Polygon(new Point[]{point4, point5, point6, point7}));
-        svgScene.add(new Polygon(new Point[]{point8, point9, point10, point11, point12}));
+        svgScene.add(new Polygon(new Point[]{point1, point2, point3}, new Style("yellow", "red", 4)));
+        svgScene.add(new Polygon(new Point[]{point4, point5, point6, point7}, new Style("yellow", "red", 4)));
+        svgScene.add(new Polygon(new Point[]{point8, point9, point10, point11, point12}, new Style("yellow", "red", 4)));
 
         svgScene.saveHtml("index.html");
     }
