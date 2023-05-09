@@ -9,16 +9,16 @@ public class Main {
                 point2 = new Point(250, 190),
                 point3 = new Point(160, 210),
                 //RECTANGLE
-                point4 = new Point(400, 50),
+                point4 = new Point(300, 200),
                 point5 = new Point(300, 100),
-                point6 = new Point(500, 200),
-                point7 = new Point(600, 300),
+                point6 = new Point(600, 100),
+                point7 = new Point(600, 200),
                 //PENTAGON
-                point8 = new Point(-5, -4),
-                point9 = new Point(-1, -4),
-                point10 = new Point(0, -2),
-                point11 = new Point(-2, 0),
-                point12 = new Point(-6, -2);
+                point8 = new Point(800, 200),
+                point9 = new Point(900, 300),
+                point10 = new Point(850, 400),
+                point11 = new Point(750, 400),
+                point12 = new Point(700, 300);
 
         Segment segment = new Segment(point1, point2);;
         Segment[] perpendicularSegements = Segment.perpendicular(segment, point3);

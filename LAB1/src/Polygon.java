@@ -39,4 +39,9 @@ public class Polygon {
         textVertices = textVertices.substring(0, textVertices.length() - 1);
         return String.format("<polygon points=\"%s\" %s />\n", textVertices, style.toSvg());
     }
+
+    public static Polygon square(Segment segment, Style style) {
+        Point p1 = new Point(segment.getP1()), p2 = new Point(segment.getP2());
+        return new Polygon(new Point[]{new Point(p1.x, p2.y), new Point(p2.x, p2.y), new Point(p2.x, p1.y), new Point(p1.x, p1.y)}, style);
+    }
 }
