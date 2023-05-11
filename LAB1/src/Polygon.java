@@ -1,24 +1,22 @@
-public class Polygon {
+public class Polygon extends Shape{
     private Point[] vertices;
 
-    private Style style;
-
     public Polygon (int value){
+        super(new Style("transparent", "black", 1));
         vertices = new Point[value];
-        style = new Style("transparent", "black", 1);
     }
     public Polygon (int value, Style style){
+        super(style);
         vertices = new Point[value];
-        this.style = style;
     }
 
     public Polygon (Point[] points){
+        super(new Style("transparent", "black", 1));
         vertices = points;
-        style = new Style("transparent", "black", 1);
     }
     public Polygon (Point[] points, Style style){
+        super(style);
         vertices = points;
-        this.style = style;
     }
 
     public void setVertice(int index, Point point){

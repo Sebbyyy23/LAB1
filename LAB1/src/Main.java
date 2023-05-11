@@ -18,7 +18,10 @@ public class Main {
                 point9 = new Point(900, 300),
                 point10 = new Point(850, 400),
                 point11 = new Point(750, 400),
-                point12 = new Point(700, 300);
+                point12 = new Point(700, 300),
+                //LINE
+                point13 = new Point(600, 500),
+                point14 = new Point(780, 600);
 
         Segment segment = new Segment(point1, point2);;
         Segment[] perpendicularSegements = Segment.perpendicular(segment, point3);
@@ -39,7 +42,8 @@ public class Main {
         svgScene.add(new Polygon(new Point[]{point1, point2, point3}, new Style("yellow", "red", 4)));
         svgScene.add(new Polygon(new Point[]{point4, point5, point6, point7}, new Style("yellow", "red", 4)));
         svgScene.add(new Polygon(new Point[]{point8, point9, point10, point11, point12}, new Style("yellow", "red", 4)));
-
+        svgScene.add(Polygon.square(new Segment(point13, point14), new Style("purple", "lime", 3)));
+        svgScene.add(Polygon.square(new Segment(point13, point14), new Style("lime", "purple", 3)));
         svgScene.saveHtml("index.html");
     }
 
