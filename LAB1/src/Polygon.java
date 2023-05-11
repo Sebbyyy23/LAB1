@@ -1,6 +1,5 @@
 public class Polygon extends Shape{
     private Point[] vertices;
-
     public Polygon (int value){
         super(new Style("transparent", "black", 1));
         vertices = new Point[value];
@@ -29,6 +28,7 @@ public class Polygon extends Shape{
         }
     }
 
+    @Override
     public String toSvg(){
         String textVertices = "";
         for (Point vertex : vertices){

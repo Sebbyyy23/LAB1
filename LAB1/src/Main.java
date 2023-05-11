@@ -33,6 +33,8 @@ public class Main {
         polygon.setVertices(new Point[]{point1, point2, point3});
         //System.out.println(polygon.toSvg());
 
+        Ellipse ellipse = new Ellipse(new Point(200, 300), 20, 50, new Style("lightblue", "blue", 3));
+        System.out.println(ellipse.toSvg());
 //        ArrayList<Polygon> polygons = new ArrayList<Polygon>();
 //        polygons.add(new Polygon(new Point[]{point1, point2, point3}));
 //        polygons.add(new Polygon(new Point[]{point4, point5, point6, point7}));
@@ -43,7 +45,7 @@ public class Main {
         svgScene.add(new Polygon(new Point[]{point4, point5, point6, point7}, new Style("yellow", "red", 4)));
         svgScene.add(new Polygon(new Point[]{point8, point9, point10, point11, point12}, new Style("yellow", "red", 4)));
         svgScene.add(Polygon.square(new Segment(point13, point14), new Style("purple", "lime", 3)));
-        svgScene.add(Polygon.square(new Segment(point13, point14), new Style("lime", "purple", 3)));
+        svgScene.add(new Ellipse(new Point(200, 300), 100, 50, new Style("lightblue", "blue", 3)));
         svgScene.saveHtml("index.html");
     }
 
