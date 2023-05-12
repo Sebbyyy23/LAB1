@@ -1,0 +1,49 @@
+How to create an executable .jar file:
+
+File -> Project Structure -> Artifacts -> + -> 'Main'
+Build -> Build Artifacts ->
+
+How to generate a test:
+
+In the class file you want to test:
+right-click -> generate -> test -> mark "setup / @Before" -> mark methods to test -> OK
+
+
+config for maven file:
+
+<dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+example:
+
+@BeforeEach
+    void setUp() {
+        borrowerName = new BorrowerName();
+        borrowerName.setFirstName("lisa");
+        borrowerName.setLastName("simpson");
+    }
+
+@Test
+    void getFullName() {
+        assertEquals("LISA SIMPSON", borrowerName.getFullName());
+    }
+
+https://github.com/Velshh mmitura
+https://github.com/llutsefer nazarkuziv
