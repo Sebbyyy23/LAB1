@@ -44,6 +44,3 @@ example:
     void getFullName() {
         assertEquals("LISA SIMPSON", borrowerName.getFullName());
     }
-
-https://github.com/Velshh mmitura
-https://github.com/llutsefer nazarkuziv
